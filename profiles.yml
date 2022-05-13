@@ -5,5 +5,5 @@ default:
       type: databricks
       schema: default
       host: "{{ env_var('DBT_HOST') }}"
-      http_path: "sql/protocolv1/o/{{ env_var('DBT_ORG_ID') }}/{{ env_var('DBT_CLUSTER_ID') }}"
+      http_path: "/sql/1.0/endpoints/652e6128a92eb5c5"
       token: "{{ env_var('DBT_ACCESS_TOKEN') }}"
