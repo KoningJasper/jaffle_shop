@@ -4,8 +4,6 @@ default:
     dev:
       type: databricks
       schema: default
-      host: "adb-7064161269814046.2.staging.azuredatabricks.net"
-      http_path: "sql/protocolv1/o/7064161269814046/0513-123639-qzl32z22"
-      token: "dapib951fca15a46dcf544835ae2b6c05111"
-      connect_retries: 5
-      connect_timeout: 60
+      host: "{{ env_var('DBT_HOST') }}"
+      http_path: "sql/protocolv1/o/{{ env_var('DBT_ORG_ID') }}/{{ env_var('DBT_CLUSTER_ID') }}"
+      token: "{{ env_var('DBT_ACCESS_TOKEN') }}"
